@@ -80,7 +80,7 @@ std::string MakeDeviceSignals(
                    R"(,"topWindowHostname":")", publisher_hostname, "\"");
 
   if (!ad_component_render_urls.empty()) {
-    absl::StrAppend(&device_signals, R"(,"adComponents":[)");
+    absl::StrAppend(&device_signals, R"(,"components":[)");
     for (int i = 0; i < ad_component_render_urls.size(); i++) {
       absl::StrAppend(&device_signals, "\"", ad_component_render_urls.at(i),
                       "\"");
